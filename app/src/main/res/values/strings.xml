@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IntuitInterviewApp</string>
+    <string name="view_details">View Details</string>
+    <string name="error">Error</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Client Error</string>
+    <string name="known_error">Unable to fetch response. Status Code: %1$d</string>
+    <string name="a_punch_hole_star_icon">A punch hole star icon</string>
+    <string name="a_eye_icon">A eye icon</string>
+    <string name="a_fork_icon">a fork icon</string>
+    <string name="stats">Stats:</string>
+    <string name="about">About:</string>
+    <string name="view_issues">View Issues</string>
+    <string name="hash">#</string>
+    <string name="no_issues">No Issues 😀</string>
+    <string name="issue_number">Issue #%1d</string>
+    <string name="status">Status:</string>
+    <string name="issues">Issues</string>
+    <string name="title">Intuit Repos</string>
+</resources>

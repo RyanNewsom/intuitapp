@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.issues.detail.IssueDetailFragment"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/issue_detail_title_tv"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/AppHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="This is super broken"/>
+
+        <TextView
+            android:id="@+id/issue_detail_status_label_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/AppHeader2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/issue_detail_title_tv"/>
+
+        <TextView
+            android:id="@+id/issue_detail_status_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@id/issue_detail_status_label_tv"
+            app:layout_constraintTop_toTopOf="@id/issue_detail_status_label_tv"
+            app:layout_constraintBottom_toBottomOf="@id/issue_detail_status_label_tv"
+            tools:text="Open"/>
+
+        <TextView
+            android:id="@+id/issue_detail_body_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/issue_detail_status_tv"
+            tools:text="Arabica, as, filter extraction dark, plunger pot at organic lungo skinny caramelization. Beans doppio siphon, aftertaste lungo, french press brewed cultivar skinny aged. Cinnamon, instant, beans flavour french press id roast. Iced, cup espresso est carajillo half and half to go espresso. White americano turkish espresso spoon mazagran kopi-luwak lungo french press doppio foam. Mocha, in espresso siphon half and half seasonal crema bar mocha foam single origin. Single origin, grinder breve chicory crema cortado aroma. Fair trade, lungo roast, coffee carajillo beans, extraction doppio sweet a redeye. Ut sweet single origin id body medium dark as cinnamon and black. Robust, decaffeinated so coffee that fair trade blue mountain body galão iced spoon. Frappuccino plunger pot trifecta sugar whipped aftertaste french press. Caramelization cinnamon, eu mocha, steamed cup half and half foam blue mountain. Flavour single shot, robust organic café au lait siphon single shot. Cream roast body froth, java to go acerbic that iced beans. Sugar fair trade mazagran acerbic café au lait arabica con panna, brewed est crema milk carajillo."/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

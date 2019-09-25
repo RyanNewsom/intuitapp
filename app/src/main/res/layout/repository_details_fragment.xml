@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".ui.repository.detail.RepositoryDetailsFragment">
+
+        <TextView
+            android:id="@+id/repository_details_about_header_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textAppearance="@style/AppHeader2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/repository_details_about_content_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_about_header_tv"
+            tools:text="Beans, cream, single shot, percolator mazagran organic chicory extra roast. In, dripper cultivar cortado blue mountain ristretto qui aged. Extraction, arabica a siphon, mazagran barista cup extraction affogato galão percolator. Decaffeinated viennese grounds plunger pot blue mountain whipped irish, white espresso single origin dark viennese. Redeye shop cup aromatic, strong saucer and redeye percolator ristretto foam." />
+
+        <TextView
+            android:id="@+id/repository_details_stats_header_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/stats"
+            android:textAppearance="@style/AppHeader2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_about_content_tv" />
+
+        <ImageView
+            android:id="@+id/repository_details_star_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/a_punch_hole_star_icon"
+            android:src="@drawable/stars_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_stats_header_tv" />
+
+        <TextView
+            android:id="@+id/repository_details_stars_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@id/repository_details_star_iv"
+            app:layout_constraintLeft_toRightOf="@id/repository_details_star_iv"
+            app:layout_constraintTop_toTopOf="@id/repository_details_star_iv"
+            tools:text="55" />
+
+        <ImageView
+            android:id="@+id/repository_details_watchers_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/a_eye_icon"
+            android:src="@drawable/watchers_gray"
+            app:layout_constraintLeft_toRightOf="@id/repository_details_stars_tv"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_stats_header_tv" />
+
+        <TextView
+            android:id="@+id/repository_details_watchers_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@id/repository_details_watchers_iv"
+            app:layout_constraintLeft_toRightOf="@id/repository_details_watchers_iv"
+            app:layout_constraintTop_toTopOf="@id/repository_details_watchers_iv"
+            tools:text="1000" />
+
+        <ImageView
+            android:id="@+id/repository_details_forks_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/a_fork_icon"
+            android:src="@drawable/fork_gray"
+            app:layout_constraintLeft_toRightOf="@id/repository_details_watchers_tv"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_stats_header_tv" />
+
+        <TextView
+            android:id="@+id/repository_details_forks_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintBottom_toBottomOf="@id/repository_details_forks_iv"
+            app:layout_constraintLeft_toRightOf="@id/repository_details_forks_iv"
+            app:layout_constraintTop_toTopOf="@id/repository_details_forks_iv"
+            tools:text="20" />
+
+        <Button
+            android:id="@+id/view_issues_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="@string/view_issues"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repository_details_forks_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

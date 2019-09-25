@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_nav_host.xml"
+    app:startDestination="@id/repositoryListFragment">
+
+    <fragment
+        android:id="@+id/repositoryListFragment"
+        android:name="com.ryannewsom.intuitinterviewapp.ui.repository.list.RepositoryListFragment"
+        android:label="@string/title"
+        tools:layout="@layout/repositories_list_fragment" >
+        <action
+            android:id="@+id/action_repositoryListFragment_to_repositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/repositoryDetailsFragment"
+        android:name="com.ryannewsom.intuitinterviewapp.ui.repository.detail.RepositoryDetailsFragment"
+        android:label=""
+        tools:layout="@layout/repository_details_fragment" >
+        <action
+            android:id="@+id/action_repositoryDetailsFragment_to_issuesListFragment"
+            app:destination="@id/issuesListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="repoId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/issuesListFragment"
+        android:name="com.ryannewsom.intuitinterviewapp.ui.issues.list.IssuesListFragment"
+        android:label="@string/issues"
+        tools:layout="@layout/issues_list_fragment" >
+        <action
+            android:id="@+id/action_issuesListFragment_to_issueDetailFragment"
+            app:destination="@id/issueDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="repoId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/issueDetailFragment"
+        android:name="com.ryannewsom.intuitinterviewapp.ui.issues.detail.IssueDetailFragment"
+        android:label=""
+        tools:layout="@layout/issue_detail_fragment">
+        <argument
+            android:name="repoId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="issueId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>
