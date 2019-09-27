@@ -9,16 +9,17 @@ abstract class GithubRemoteDataSource {
     protected val retrofit: Retrofit
         get() {
             val okHttpClient = OkHttpClient().newBuilder()
-                .addInterceptor { chain ->
-                    val request = chain.request()
-                    val authedRequest: Request
-
-                    authedRequest = request.newBuilder()
-                        .addHeader(AUTHENTICATION_HEADER, GITHUB_API_KEY)
-                        .build()
-
-                    chain.proceed(authedRequest)
-                }.build()
+//                .addInterceptor { chain ->
+//                    val request = chain.request()
+//                    val authedRequest: Request
+//
+//                    authedRequest = request.newBuilder()
+//                        .addHeader(AUTHENTICATION_HEADER, GITHUB_API_KEY)
+//                        .build()
+//
+//                    chain.proceed(authedRequest)
+//                }
+                .build()
 
             return Retrofit.Builder()
                 .baseUrl("https://api.github.com")
